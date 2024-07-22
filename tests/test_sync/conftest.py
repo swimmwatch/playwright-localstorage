@@ -1,3 +1,5 @@
+import typing
+
 import pytest
 from playwright.sync_api import Page
 
@@ -7,7 +9,7 @@ from tests.utils import make_fs_url
 
 @pytest.fixture
 def temp_page(page: Page, temp_page_maker: TempFileFactoryType):
-    def wrapper(js_code: str | None = None) -> Page:
+    def wrapper(js_code: typing.Optional[str] = None) -> Page:
         if js_code is None:
             js_code = ""
 
