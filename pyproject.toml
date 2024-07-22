@@ -6,7 +6,7 @@ authors = ["Dmitry Vasiliev <contact.vasiliev.dmitry@gmail.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.9"
 playwright = "^1.44.0"
 
 
