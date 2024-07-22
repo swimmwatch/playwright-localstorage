@@ -54,5 +54,7 @@ jobs:
           cache: "poetry"
       - name: Install dependencies
         run: make install
+      - name: Install browser dependencies
+        run: make browser-install
       - name: Run pytest
         run: make test

@@ -27,3 +27,6 @@ install:
 
 lock:
 	poetry lock --no-update
+
+browser-install:
+	poetry run playwright install
