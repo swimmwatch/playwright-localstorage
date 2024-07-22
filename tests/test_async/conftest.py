@@ -1,4 +1,5 @@
 import asyncio
+import typing
 
 import nest_asyncio
 import pytest
@@ -12,7 +13,7 @@ from tests.utils import make_fs_url
 
 @pytest.fixture
 async def temp_page(page_async: Page, temp_page_maker: TempFileFactoryType) -> TempPageFactoryType:
-    async def wrapper(js_code: str | None = None) -> Page:
+    async def wrapper(js_code: typing.Optional[str] = None) -> Page:
         if js_code is None:
             js_code = ""
 
