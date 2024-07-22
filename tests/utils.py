@@ -1,7 +1,8 @@
+import typing
 from pathlib import Path
 
 
-def make_fs_url(path: str | Path) -> str:
+def make_fs_url(path: typing.Union[str, Path]) -> str:
     """
     Return File URL.
 
