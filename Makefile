@@ -9,6 +9,9 @@ flake:
 black:
 	poetry run black --config formatters-cfg.toml $(SRC_DIR)
 
+poetry-check:
+	poetry check
+
 black-lint:
 	poetry run black --check --config formatters-cfg.toml $(SRC_DIR)
 
@@ -17,7 +20,7 @@ isort:
 
 format: black isort
 
-lint: flake mypy black-lint
+lint: flake mypy black-lint poetry-check
 
 test:
 	poetry run pytest -n logical $(SRC_DIR)
