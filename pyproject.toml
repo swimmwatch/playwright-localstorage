@@ -1,9 +1,27 @@
 [tool.poetry]
 name = "playwright-localstorage"
 version = "1.0.0"
-description = ""
-authors = ["Dmitry Vasiliev <contact.vasiliev.dmitry@gmail.com>"]
+description = "Extension for the Playwright package that allows access to the Web Storage API."
+documentation = "https://github.com/swimmwatch/playwright-localstorage"
+license = "MIT"
 readme = "README.md"
+homepage = "https://pypi.org/project/playwright-localstorage/"
+repository = "https://github.com/swimmwatch/playwright-localstorage"
+keywords = ["Playwright", "Web Storage API", "Poetry"]
+authors = ["Dmitry Vasiliev <contact.vasiliev.dmitry@gmail.com>"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Operating System :: OS Independent",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Framework :: AsyncIO"
+]
 
 [tool.poetry.dependencies]
 python = "^3.9"
