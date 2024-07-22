@@ -1,0 +1,58 @@
+name: Run Python linters and tests
+on:
+  pull_request:
+    paths:
+      - '**/*.py'
+      - 'poetry.lock'
+      - 'pyproject.toml'
+    branches:
+      - master
+      - dev
+
+jobs:
+  lint:
+    name: Run Python linters
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        poetry-version: ["1.8.3"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Poetry
+        run: pipx install poetry==${{matrix.poetry-version}}
+      - name: "Setup Python ${{matrix.python-version}}"
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{matrix.python-version}}
+          cache: 'poetry'
+      - name: Install dependencies
+        run: make install
+      - name: Run flake8
+        run: make flake
+      - name: Run mypy
+        run: make mypy
+      - name: Run mypy
+        run: make black-lint
+  test:
+    name: Run Python tests
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10", "3.11", "3.12"]
+        poetry-version: ["1.8.3"]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Install Poetry
+        run: pipx install poetry
+      - name: Setup Python ${{matrix.python-versions}}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{matrix.python-version}}
+          cache: "poetry"
+      - name: Install dependencies
+        run: make install
+      - name: Run pytest
+        run: make test
