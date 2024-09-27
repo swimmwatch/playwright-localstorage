@@ -941,13 +941,13 @@ dev = ["pre-commit", "pytest-asyncio", "tox"]
 
 [[package]]
 name = "pytest-playwright"
-version = "0.5.1"
+version = "0.5.2"
 description = "A pytest wrapper with fixtures for Playwright to automate web browsers"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest-playwright-0.5.1.tar.gz", hash = "sha256:6b0683cbacd060f338b37d0c2cdac25d841e14f1440e986efcceaacd3d61a268"},
-    {file = "pytest_playwright-0.5.1-py3-none-any.whl", hash = "sha256:54eb12742de16bf50d9630fe06ac398727e52d5c1e55269acb37e1ede91d9e00"},
+    {file = "pytest_playwright-0.5.2-py3-none-any.whl", hash = "sha256:2c5720591364a1cdf66610b972ff8492512bc380953e043c85f705b78b2ed582"},
+    {file = "pytest_playwright-0.5.2.tar.gz", hash = "sha256:c6d603df9e6c50b35f057b0528e11d41c0963283e98c257267117f5ed6ba1924"},
 ]
 
 [package.dependencies]
@@ -958,18 +958,17 @@ python-slugify = ">=6.0.0,<9.0.0"
 
 [[package]]
 name = "pytest-playwright-async"
-version = "0.17.0"
+version = "1.0.1"
 description = "ASYNC Pytest plugin for Playwright"
 optional = false
 python-versions = ">=3.8"
 files = [
-    {file = "pytest_playwright_async-0.17.0-py3-none-any.whl", hash = "sha256:8a99d6ebfa3a9b9163cbc714e73724cf860442273b379d8a828b7e084c42302b"},
-    {file = "pytest_playwright_async-0.17.0.tar.gz", hash = "sha256:286c9addf0cf4cb1a1216517f2f5044857bddbf7f8509914ad1e3d247ba80661"},
+    {file = "pytest_playwright_async-1.0.1-py3-none-any.whl", hash = "sha256:ed667a519a34b8401ac194aadbec0d81695dded91832d60f8de83c5ad9fce99c"},
+    {file = "pytest_playwright_async-1.0.1.tar.gz", hash = "sha256:a4fd8e1094f1ccfbf12e25e7d87428d82c57a4ebb4e4e2ad12deb59228567a27"},
 ]
 
 [package.dependencies]
-pytest-asyncio = "*"
-pytest-playwright = ">=0.5.0"
+pytest-playwright = ">=0.5.2"
 
 [[package]]
 name = "pytest-xdist"
@@ -1202,4 +1201,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "8ecd36dfb4b9e199d36d85ecd2054d9be7ec59e5546a33bbbbf1d18fb54f9255"
+content-hash = "378f04d18b4606ffd591ee4c6cb877abfa8690fa7a3300e7fe49007836d21428"
