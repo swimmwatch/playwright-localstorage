@@ -1,0 +1,75 @@
+site_name: Playwright Web Storages
+site_url: https://swimmwatch.github.io/playwright-localstorage/
+site_author: Dmitry Vasiliev
+site_description: >-
+  Extension for the Playwright package that allows access to the Web Storage API.
+
+repo_url: https://github.com/swimmwatch/playwright-localstorage
+repo_name: swimmwatch/playwright-localstorage
+
+copyright: Copyright &copy; 2023 - 2024 Dmitry Vasiliev
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: slate
+      primary: deep green
+      accent: green
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: default
+      primary: green
+      accent: deep green
+      toggle:
+        icon: material/lightbulb
+        name: Switch to light mode
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/swimmwatch/playwright-localstorage/
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/project/playwright-localstorage/
+
+nav:
+  - Home: index.md
+  - Guide:
+      - Installation: guide/install.md
+  - References:
+      - Base: references/playwright_localstorage.base.md
+      - Sync: references/playwright_localstorage.sync_.md
+      - Async: references/playwright_localstorage.async_.md
+  - License: license.md
+
+plugins:
+  - search
+  - section-index
+  - mkdocstrings
+  - coverage
+  - macros:
+      include_dir: .
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+      htmlmin_opts:
+        remove_comments: true
+      cache_safe: true
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences

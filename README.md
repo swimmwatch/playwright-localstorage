@@ -1,10 +1,25 @@
 # playwright-localstorage
 
-[![Python](https://img.shields.io/pypi/pyversions/playwright-localstorage.svg)](https://www.python.org/downloads/)
-![Python linters and tests](https://github.com/swimmwatch/playwright-localstorage/actions/workflows/python-check.yml/badge.svg?branch=dev)
-[![PyPI](https://img.shields.io/pypi/v/playwright-localstorage.svg)](https://pypi.org/project/playwright-localstorage/)
-[![Downloads](https://img.shields.io/pypi/dm/playwright-localstorage.svg)](https://pypi.org/project/playwright-localstorage/)
-[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/swimmwatch/playwright-localstorage/blob/master/LICENSE)
+<!-- markdownlint-disable -->
+![playwright-localstorage](https://socialify.git.ci/swimmwatch/playwright-localstorage/image?description=1&font=Raleway&language=1&name=1&owner=1&pattern=Brick%20Wall&theme=Dark)
+
+<div align="center">
+  <p>
+    <a href="https://pypi.org/project/playwright-localstorage"><img src="https://img.shields.io/pypi/v/playwright-localstorage.svg" alt="PyPI"></a>
+    <a href="pyproject.toml"><img src="https://img.shields.io/pypi/pyversions/playwright-localstorage" alt="Supported Python Versions"></a>
+    <br/>
+    <a href="LICENSE"><img src="https://img.shields.io/github/license/swimmwatch/playwright-localstorage" alt="License"></a>
+    <a href="https://github.com/ambv/black"><img src="https://img.shields.io/badge/code%20style-black-black" alt="Code style"></a>
+    <a href="https://github.com/pycqa/flake8"><img src="https://img.shields.io/badge/lint-flake8-black" alt="Linter"></a>
+    <a href="https://github.com/python/mypy"><img src="https://img.shields.io/badge/type%20checker-mypy-black" alt="Type checker"></a>
+    <a href="https://snyk.io/advisor/python/playwright-localstorage"><img src="https://snyk.io/advisor/python/playwright-localstorage/badge.svg" alt="Package health"></a>
+    <br/>
+    <a href="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/python-check.yml"><img src="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/python-check.yml/badge.svg" alt="Tests"></a>
+    <a href="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/release.yml"><img src="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/release.yml/badge.svg" alt="Release"></a>
+    <a href="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/docs.yml"><img src="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/docs.yml/badge.svg" alt="Docs"></a>
+  </p>
+</div>
+<!-- markdownlint-enable -->
 
 Extension for the Playwright package that allows access to the Web Storage API.
 

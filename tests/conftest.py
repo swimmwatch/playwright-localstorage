@@ -43,11 +43,13 @@ def temp_page_maker(
     temp_file_path = Path(path)
 
     def wrapper(js_code: str) -> Path:
-        """
-        Creates HTML file with passed `js_code`.
+        """Creates HTML file with passed `js_code`.
 
-        :param js_code: JavaScript code.
-        :return: HTML file path.
+        Args:
+            js_code: JavaScript code.
+
+        Returns:
+            HTML file path.
         """
         content = template_temp_page.render(js_code=js_code)
 

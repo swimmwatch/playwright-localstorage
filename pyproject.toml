@@ -49,6 +49,16 @@ pytest-asyncio = "^0.24.0"
 pytest-playwright-async = "^0.17.0"
 nest-asyncio = "^1.6.0"
 flake8-pytest-style = "^2.0.0"
+mkdocs-material = "^9.5.39"
+mkdocstrings = "^0.26.1"
+mkdocstrings-python = "^1.11.1"
+mkdocs-coverage = "^1.1.0"
+mkdocs-section-index = "^0.3.9"
+mkdocs = "^1.6.1"
+mkdocs-macros-plugin = "^1.2.0"
+mkdocs-minify-plugin = "^0.8.0"
+lazydocs = "^0.4.8"
+pydocstyle = "^6.3.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -60,3 +70,4 @@ default_section = "THIRDPARTY"
 force_single_line = true
 line_length = 120
 use_parentheses = true
+py_version=39

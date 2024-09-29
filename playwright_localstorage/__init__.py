@@ -1,5 +1,5 @@
-from playwright_localstorage._async import AsyncLocalStorageAccessor
-from playwright_localstorage._sync import LocalStorageAccessor
+from playwright_localstorage.async_ import AsyncLocalStorageAccessor
+from playwright_localstorage.sync_ import LocalStorageAccessor
 
 __all__ = [
     "LocalStorageAccessor",
