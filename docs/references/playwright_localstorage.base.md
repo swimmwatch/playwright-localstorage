@@ -22,6 +22,19 @@
 
 
 
+---
+
+<a href="../../playwright_localstorage/base.py#L25"><img align="right" style="float:right;" src="https://img.shields.io/badge/-source-cccccc?style=flat-square"></a>
+
+## <kbd>class</kbd> `BaseSessionStorageAccessor`
+
+
+
+
+
+
+
+
 
 
 ---
