@@ -26,7 +26,10 @@ isort:
 
 format: black isort
 
-lint: flake mypy black-lint poetry-check doc-lint
+remove-docs:
+	rm -rf $(REFERENCES_DIR)/tests.* $(REFERENCES_DIR)/playwright_localstorage.md
+
+lint: flake mypy black-lint poetry-check doc-lint remove-docs
 
 test:
 	poetry run pytest -n logical $(TESTS_DIR)
