@@ -16,10 +16,10 @@ jobs:
     steps:
       - name: "Checkout"
         uses: actions/checkout@v4
-      - name: "Setup Python"
-        uses: actions/setup-python@v5
       - name: "Install Poetry ${{matrix.poetry-version}}"
         run: pipx install poetry==${{matrix.poetry-version}}
+      - name: "Setup Python"
+        uses: actions/setup-python@v5
       - name: "Build package"
         run: poetry build
       - name: "Publish package distributions to PyPI"

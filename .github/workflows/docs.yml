@@ -18,13 +18,13 @@ jobs:
     steps:
       - name: "Checkout"
         uses: actions/checkout@v4
+      - name: "Install Poetry ${{matrix.poetry-version}}"
+        run: pipx install poetry==${{matrix.poetry-version}}
       - name: "Setup Python ${{matrix.python-version}}"
         uses: actions/setup-python@v5
         with:
           python-version: ${{matrix.python-version}}
           cache: 'poetry'
-      - name: "Install Poetry ${{matrix.poetry-version}}"
-        run: pipx install poetry==${{matrix.poetry-version}}
       - name: "Install dependencies"
         run: make install
       - name: "Configure Git Credentials"
