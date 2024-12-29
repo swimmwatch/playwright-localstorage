@@ -2,6 +2,8 @@ SRC_DIR=.
 TESTS_DIR=tests
 REFERENCES_DIR=docs/references
 PACKAGE_DIR=playwright_localstorage
+BROWSERS=webkit firefox chromium
+BROWSERS_TESTS=$(foreach browser,$(BROWSERS),--browser=$(browser))
 
 mypy:
 	poetry run mypy --config formatters-cfg.toml $(SRC_DIR)
@@ -35,7 +37,7 @@ build:
 lint: flake mypy black-lint poetry-check doc-lint remove-docs
 
 test:
-	poetry run pytest --browser firefox webkit chromium --cov=playwright_localstorage -n logical $(TESTS_DIR)
+	poetry run pytest $(BROWSERS_TESTS) --cov=playwright_localstorage --numprocesses logical $(TESTS_DIR)
 
 install:
 	poetry install --no-root
@@ -44,7 +46,7 @@ lock:
 	poetry lock --no-update
 
 browser-install:
-	poetry run playwright install
+	poetry run playwright install $(BROWSERS)
 
 mkdocs-serve:
 	poetry run mkdocs serve
