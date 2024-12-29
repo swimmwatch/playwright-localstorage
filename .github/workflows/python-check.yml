@@ -44,6 +44,7 @@ jobs:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
         poetry-version: ["1.8.3"]  # TODO: pass from env
+        browser: ["chromium", "firefox", "webkit"]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -57,6 +58,6 @@ jobs:
       - name: Install dependencies
         run: make install
       - name: Install browser dependencies
-        run: make browser-install
+        run: make browser-install browser=${{matrix.browser}}
       - name: Run pytest
-        run: make test
+        run: make test browser=${{matrix.browser}}
