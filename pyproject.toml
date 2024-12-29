@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "playwright-localstorage"
-version = "1.0.0"
+version = "1.0.1"
 description = "Extension for the Playwright package that allows access to the Web Storage API."
 documentation = "https://github.com/swimmwatch/playwright-localstorage"
 license = "MIT"
