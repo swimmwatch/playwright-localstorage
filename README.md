@@ -21,7 +21,8 @@
 </div>
 <!-- markdownlint-enable -->
 
-Extension for the Playwright package that allows access to the Web Storage API.
+Extension for the Playwright package 
+that allows access to the [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API).
 
 ## Installation
 
