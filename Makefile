@@ -46,6 +46,7 @@ lock:
 	poetry lock --no-update
 
 browser-install:
+	poetry run playwright install-deps $(BROWSERS)
 	poetry run playwright install $(BROWSERS)
 
 mkdocs-serve:
