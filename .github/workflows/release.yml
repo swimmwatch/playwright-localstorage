@@ -10,6 +10,9 @@ jobs:
   deploy:
     name: "Build and deploy to PyPI"
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    environment: pypi
     strategy:
       matrix:
         poetry-version: ["1.8.3"]
