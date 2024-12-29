@@ -35,7 +35,7 @@ build:
 lint: flake mypy black-lint poetry-check doc-lint remove-docs
 
 test:
-	poetry run pytest -n logical $(TESTS_DIR)
+	poetry run pytest --browser firefox webkit chromium --cov=playwright_localstorage -n logical $(TESTS_DIR)
 
 install:
 	poetry install --no-root
