@@ -26,6 +26,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.9"
 playwright = "1.*"
+pytest-cov = "^6.0.0"
 
 
 [tool.poetry.group.dev.dependencies]
