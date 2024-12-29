@@ -16,26 +16,26 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
-        poetry-version: ["1.8.3"]  # TODO: pass from env
+        poetry-version: ["${{env.POETRY_VERSION}}"]
     steps:
-      - name: Checkout
+      - name: "Checkout"
         uses: actions/checkout@v4
-      - name: Install Poetry
-        run: pipx install poetry==${{matrix.poetry-version}}
       - name: "Setup Python ${{matrix.python-version}}"
         uses: actions/setup-python@v5
         with:
           python-version: ${{matrix.python-version}}
           cache: 'poetry'
-      - name: Install dependencies
+      - name: "Install Poetry ${{matrix.poetry-version}}"
+        run: pipx install poetry==${{matrix.poetry-version}}
+      - name: "Install dependencies"
         run: make install
-      - name: Run flake8
+      - name: "Run flake8"
         run: make flake
-      - name: Run mypy
+      - name: "Run mypy"
         run: make mypy
-      - name: Run black lint
+      - name: "Run black lint"
         run: make black-lint
-      - name: Run Poetry check
+      - name: "Run Poetry check"
         run: make poetry-check
   test:
     name: Run Python tests
@@ -43,21 +43,21 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
-        poetry-version: ["1.8.3"]  # TODO: pass from env
+        poetry-version: ["${{env.POETRY_VERSION}}"]
         browser: ["chromium", "firefox", "webkit"]
     steps:
-      - name: Checkout
+      - name: "Checkout"
         uses: actions/checkout@v4
-      - name: Install Poetry
-        run: pipx install poetry
-      - name: Setup Python ${{matrix.python-versions}}
+      - name: "Setup Python ${{matrix.python-versions}}"
         uses: actions/setup-python@v5
         with:
           python-version: ${{matrix.python-version}}
           cache: "poetry"
+      - name: "Install Poetry ${{matrix.poetry-version}}"
+        run: pipx install poetry==${{matrix.poetry-version}}
       - name: Install dependencies
         run: make install
-      - name: Install browser dependencies
+      - name: "Install browser dependencies"
         run: make browser-install browser=${{matrix.browser}}
-      - name: Run pytest
+      - name: "Run pytest"
         run: make test browser=${{matrix.browser}}

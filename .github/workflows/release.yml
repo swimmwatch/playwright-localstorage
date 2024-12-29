@@ -12,17 +12,17 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        poetry-version: ["1.8.3"]  # TODO: pass from env
+        poetry-version: ["${{env.POETRY_VERSION}}"]
     steps:
       - name: "Checkout"
         uses: actions/checkout@v4
       - name: "Setup Python"
         uses: actions/setup-python@v5
-      - name: "Setup Poetry ${{matrix.poetry-version}}"
+      - name: "Install Poetry ${{matrix.poetry-version}}"
         run: pipx install poetry==${{matrix.poetry-version}}
       - name: "Build package"
         run: poetry build
-      - name: Publish package distributions to PyPI
+      - name: "Publish package distributions to PyPI"
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist/
