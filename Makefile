@@ -29,6 +29,9 @@ format: black isort
 remove-docs:
 	rm -rf $(REFERENCES_DIR)/tests.* $(REFERENCES_DIR)/playwright_localstorage.md
 
+build:
+	poetry build
+
 lint: flake mypy black-lint poetry-check doc-lint remove-docs
 
 test:
