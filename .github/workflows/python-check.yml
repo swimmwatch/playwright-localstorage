@@ -5,6 +5,7 @@ on:
       - '**/*.py'
       - 'poetry.lock'
       - 'pyproject.toml'
+      - '.github/workflows/python-check.yml'
     branches:
       - master
       - dev
@@ -16,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
         poetry-version: ["1.8.3"]
     steps:
       - name: "Checkout"
@@ -43,7 +44,7 @@ jobs:
     runs-on: ${{matrix.os}}
     strategy:
       matrix:
-        python-version: ["3.9", "3.10", "3.11", "3.12"]
+        python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
         poetry-version: ["1.8.3"]
         browser: ["chromium", "firefox", "webkit"]
         os: ["ubuntu-latest", "windows-latest", "macos-latest"]
@@ -59,7 +60,12 @@ jobs:
           cache: "poetry"
       - name: Install dependencies
         run: make install
-      - name: "Install browser dependencies"
+      - name: "Install ${{matrix.browser}} dependencies"
         run: make browser-install browser=${{matrix.browser}}
       - name: "Run pytest"
         run: make test browser=${{matrix.browser}}
+      - name: "Upload coverage reports to Codecov"
+        if: matrix.python-version == '3.13' && matrix.os == 'ubuntu-latest' && matrix.browser == 'chromium' && github.actor != 'dependabot[bot]'
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
