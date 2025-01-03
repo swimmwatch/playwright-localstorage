@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/license/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/guide/install/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/references/playwright_localstorage.async_/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/references/playwright_localstorage.base/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/references/playwright_localstorage.sync_/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+    <url>
+         <loc>https://swimmwatch.github.io/playwright-localstorage/coverage/</loc>
+         <lastmod>2025-01-03</lastmod>
+    </url>
+</urlset>
