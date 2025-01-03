@@ -8,6 +8,7 @@ on:
     branches:
       - master
       - dev
+      - release/*
 
 jobs:
   lint:
@@ -39,12 +40,13 @@ jobs:
         run: make poetry-check
   test:
     name: Run Python tests
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.os}}
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12"]
         poetry-version: ["1.8.3"]
         browser: ["chromium", "firefox", "webkit"]
+        os: ["ubuntu-latest", "windows-latest", "macos-latest"]
     steps:
       - name: "Checkout"
         uses: actions/checkout@v4
