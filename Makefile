@@ -35,7 +35,7 @@ build:
 lint: flake mypy black-lint poetry-check doc-lint remove-docs
 
 test:
-	poetry run pytest --browser=$(browser) --cov=$(PACKAGE_DIR) --numprocesses logical $(TESTS_DIR)
+	poetry run pytest --browser=$(browser) --cov=$(PACKAGE_DIR) --cov-branch --cov-report=xml --numprocesses logical $(TESTS_DIR)
 
 install:
 	poetry install --no-root

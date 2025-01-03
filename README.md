@@ -31,8 +31,8 @@
     <a href="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/python-check.yml">
         <img src="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/python-check.yml/badge.svg" alt="Tests">
     </a>
-    <a href="https://coverage-badge.samuelcolvin.workers.dev/redirect/playwright-localstorage/playwright-localstorage" target="_blank">
-        <img src="https://coverage-badge.samuelcolvin.workers.dev/playwright-localstorage/playwright-localstorage.svg" alt="Coverage">
+    <a href="https://codecov.io/gh/swimmwatch/playwright-localstorage" target="_blank">
+        <img src="https://codecov.io/gh/swimmwatch/playwright-localstorage/branch/master/graph/badge.svg" alt="Coverage">
     </a>
     <a href="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/release.yml">
         <img src="https://github.com/swimmwatch/playwright-localstorage/actions/workflows/release.yml/badge.svg" alt="Release">
