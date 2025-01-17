@@ -52,3 +52,6 @@ mkdocs-serve:
 
 mkdocs-deploy:
 	poetry run mkdocs gh-deploy --force
+
+actionlint:
+	docker run --rm -v .:/repo --workdir /repo rhysd/actionlint:latest -color
