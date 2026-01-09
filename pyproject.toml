@@ -27,6 +27,7 @@ classifiers = [
 [tool.poetry.dependencies]
 python = "^3.10"
 playwright = "1.*"
+greenlet = "3.*"
 
 
 [tool.poetry.group.dev.dependencies]
@@ -63,7 +64,7 @@ pytest-cov = "^6.0.0"
 bandit = "^1.9.2"
 
 [build-system]
-requires = ["poetry-core"]
+requires = ["poetry-core>=2.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.isort]
