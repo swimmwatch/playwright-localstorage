@@ -41,7 +41,7 @@ install:
 	poetry install --no-root
 
 lock:
-	poetry lock --no-update
+	poetry lock
 
 browser-install:
 	poetry run playwright install-deps $(browser)
@@ -54,4 +54,4 @@ mkdocs-deploy:
 	poetry run mkdocs gh-deploy --force
 
 actionlint:
-	docker run --rm -v .:/repo --workdir /repo rhysd/actionlint:latest -color
+	docker run --rm -v $(shell pwd):/repo --workdir /repo rhysd/actionlint:latest -color

@@ -47,6 +47,8 @@
 Extension for the Playwright package 
 that allows access to the [Web Storage API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API).
 
+Supported Python versions: 3.10–3.14.
+
 ## Installation
 
 ```shell
