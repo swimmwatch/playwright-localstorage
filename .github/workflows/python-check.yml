@@ -66,6 +66,6 @@ jobs:
         run: make test browser=${{matrix.browser}}
       - name: "Upload coverage reports to Codecov"
         if: matrix.python-version == '3.13' && matrix.os == 'ubuntu-latest' && matrix.browser == 'chromium' && github.actor != 'dependabot[bot]'
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
